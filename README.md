@@ -50,7 +50,7 @@ We welcome contributions! If you have ideas for improvements or bug fixes, pleas
 
 ## 📄 License
 
-This project is proudly licensed under the Apache License. For more details, see [LICENSE.md](LICENSE.md).
+This project is proudly licensed under the Apache License. For more details, see [LICENSE.md](https://github.com/gnanesh-16/Automated_gigglethon/blob/main/LICENSE).
 
 ## 📸 Gallery
 ![1_robotic_arm_setup](https://github.com/gnanesh-16/Automated_gigglethon/assets/98212179/4c2fd188-e96a-4b49-b3f6-ca11ed4f598f)
