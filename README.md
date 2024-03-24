@@ -1,8 +1,8 @@
 <h1 align="center">🤖 Arduino-Powered Robotic Arm with Advanced Control 🕹️</h1>
 
 <p align="center">
-  An innovative, energy-efficient robotic arm that leverages Arduino for precision control, designed to handle tasks beyond the reach of traditional robotic arms. 🌟
-  This project introduces an innovative robotic arm powered by Arduino, designed for efficiency. It incorporates a dual-functionality system where potentiometers serve as joysticks, offering intuitive control over the robotic arm's movements. retaining the capability to manipulate heavier weights than traditional robotic arms can't manage
+ 🌟 An innovative, energy-efficient robotic arm that leverages Arduino for precision control, designed to handle tasks beyond the reach of traditional robotic arms. 🌟
+ designed for efficiency. It incorporates a dual-functionality system where potentiometers serve as joysticks, offering intuitive control over the robotic arm's movements. retaining the capability to manipulate heavier weights than traditional robotic arms can't manage
 </p>
 
 <div align="center">
