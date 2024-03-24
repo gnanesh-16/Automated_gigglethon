@@ -1,0 +1,48 @@
+//#include <Servo.h>
+//
+//const int potPinBase = A0;  
+//const int potPinHand = A1;  
+//const int basePin = 8;      
+//const int handPin = 6;     
+//
+//Servo servoBase;  
+//Servo servoHand;  
+//
+//void setup() {
+//  servoBase.attach(basePin);  
+//  servoHand.attach(handPin);  
+//}
+//
+//void loop() {
+//  
+// 
+//  int potValueHand = analogRead(potPinHand);
+//  int angleHand = map(potValueHand, 0, 1023, -180, 180);
+//  servoHand.write(angleHand);
+//
+//  delay(15); // Small delay for stability
+//}
+//
+#include <Servo.h>
+
+const int potPinBase = A0;  
+const int potPinHand = A1;  
+const int basePin = 8;      
+const int handPin = 6;      
+
+Servo servoBase;  
+Servo servoHand;  
+
+void setup() {
+  servoBase.attach(basePin);  
+  servoHand.attach(handPin);  
+}
+
+void loop() {
+  
+  int potValueBase = analogRead(potPinBase);
+  int angleBase = map(potValueBase, 0, 1023, 0, 180);
+  angleBase = 180 - angleBase;
+  servoBase.write(angleBase);
+  delay(15); 
+}
