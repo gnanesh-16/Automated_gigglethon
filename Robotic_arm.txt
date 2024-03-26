@@ -38,6 +38,29 @@ void setup() {
   servoHand.attach(handPin);  
 }
 
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+void loop1() {
+  // scan from 0 to 180 degrees
+  for (servoPos = 0; servoPos < 180; servoPos++) {
+    servol.write(servoPos);
+    servo2.write(servoPos);
+    servo3.write(servoPos);
+    servo4.write(servoPos);
+    delay(100);
+  }
+  // now scan back from 180 to 0 degrees
+  // Code for scanning back seems to be missing here
+for (servoPos = 180; servoPos > 0; servoPos--) {
+  servol.write(servoPos);
+  servo2.write(servoPos);
+  servo3.write(servoPos);
+  servo4.write(servoPos);
+  delay(100);
+}
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 void loop() {
   
   int potValueBase = analogRead(potPinBase);
