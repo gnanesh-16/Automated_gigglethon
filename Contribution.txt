@@ -1,3 +1,4 @@
 @Gnanesh Balusa -Owner
 Contributors:- 
 1. Sai Srinivas - Optimized code for Synchronization Movement
+2. Tallam Sai Nithin - I've included appropriate pictures
