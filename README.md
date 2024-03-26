@@ -56,3 +56,5 @@ This project is proudly licensed under the Apache License. For more details, see
 ![1_robotic_arm_setup](https://github.com/gnanesh-16/Automated_gigglethon/assets/98212179/4c2fd188-e96a-4b49-b3f6-ca11ed4f598f)
 
 
+
+![WhatsApp Image 2024-03-24 at 06 36 42_79c7faba](https://github.com/gnanesh-16/Automated_gigglethon/assets/115773664/cc50f76f-8fdb-46b2-a540-5f3e526aafbd)
