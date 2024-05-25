@@ -1,28 +1,3 @@
-//#include <Servo.h>
-//
-//const int potPinBase = A0;  
-//const int potPinHand = A1;  
-//const int basePin = 8;      
-//const int handPin = 6;     
-//
-//Servo servoBase;  
-//Servo servoHand;  
-//
-//void setup() {
-//  servoBase.attach(basePin);  
-//  servoHand.attach(handPin);  
-//}
-//
-//void loop() {
-//  
-// 
-//  int potValueHand = analogRead(potPinHand);
-//  int angleHand = map(potValueHand, 0, 1023, -180, 180);
-//  servoHand.write(angleHand);
-//
-//  delay(15); // Small delay for stability
-//}
-//
 #include <Servo.h>
 
 const int potPinBase = A0;  
@@ -37,34 +12,40 @@ void setup() {
   servoBase.attach(basePin);  
   servoHand.attach(handPin);  
 }
+
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-void loop1() {
-  // scan from 0 to 180 degrees
-  for (servoPos = 0; servoPos < 180; servoPos++) {
-    servol.write(servoPos);
-    servo2.write(servoPos);
-    servo3.write(servoPos);
-    servo4.write(servoPos);
+void scanServos() {
+  // Scan from 0 to 180 degrees
+  for (int servoPos = 0; servoPos <= 180; servoPos++) {
+    servoBase.write(servoPos);
+    servoHand.write(servoPos);
     delay(100);
   }
-  // now scan back from 180 to 0 degrees
-  // Code for scanning back seems to be missing here
-for (servoPos = 180; servoPos > 0; servoPos--) {
-  servol.write(servoPos);
-  servo2.write(servoPos);
-  servo3.write(servoPos);
-  servo4.write(servoPos);
-  delay(100);
+  // Now scan back from 180 to 0 degrees
+  for (int servoPos = 180; servoPos >= 0; servoPos--) {
+    servoBase.write(servoPos);
+    servoHand.write(servoPos);
+    delay(100);
+  }
 }
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 void loop() {
-  
+  // Read the potentiometer values and control the servos
   int potValueBase = analogRead(potPinBase);
   int angleBase = map(potValueBase, 0, 1023, 0, 180);
   angleBase = 180 - angleBase;
   servoBase.write(angleBase);
-  delay(15); 
+
+  int potValueHand = analogRead(potPinHand);
+  int angleHand = map(potValueHand, 0, 1023, 0, 180);
+  servoHand.write(angleHand);
+
+  delay(15); // Small delay for stability
+
+  // Uncomment the following line to perform the scan operation
+  // scanServos();
 }
+
